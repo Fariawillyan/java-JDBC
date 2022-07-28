@@ -5,12 +5,17 @@ public class TestaListagem {
 
     public static void main(String[] args) throws SQLException {
 
-        // conexao com o driver (precisar adicionar o jar do drive conect em library)
-        Connection conexao = DriverManager
+        /* connection com o driver (precisar adicionar o jar do drive conect em library)
+        Connection connection = DriverManager               <---(virou classe ConnectionFactory)
                 .getConnection("jdbc:mysql://localhost/loja_virtual?useTimezone=true&serverTimezone=UTC",
-                        "root", "root");
+                        "root", "root");*/
 
-        Statement stm = conexao.createStatement();
+
+        ConnectionFactory factory = new ConnectionFactory();
+        Connection connection = factory.recuperaConexao();
+
+
+        Statement stm = connection.createStatement();
         stm.execute("SELECT ID, NOME, DESCRICAO FROM PRODUTO");
 
         ResultSet rst = stm.getResultSet();
@@ -26,7 +31,7 @@ public class TestaListagem {
             System.out.println(descricao);
         }
 
-        conexao.close();
+        connection.close();
 
     }
 
