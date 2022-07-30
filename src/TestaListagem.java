@@ -1,5 +1,4 @@
 import java.sql.*;
-import java.util.List;
 
 public class TestaListagem {
 
@@ -15,8 +14,8 @@ public class TestaListagem {
         Connection connection = factory.recuperaConexao();
 
 
-        Statement stm = connection.createStatement();
-        stm.execute("SELECT ID, NOME, DESCRICAO FROM PRODUTO");
+        PreparedStatement stm = connection.prepareStatement("SELECT ID, NOME, DESCRICAO FROM PRODUTO");
+        stm.execute();
 
         ResultSet rst = stm.getResultSet();
 

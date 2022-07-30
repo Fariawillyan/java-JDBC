@@ -7,8 +7,8 @@ public class TestaInsercao {
 
     public static void main(String[] args) throws SQLException {
 
-        var connectionFactory = new ConnectionFactory();
-        var connection = connectionFactory.recuperaConexao();
+        ConnectionFactory factory = new ConnectionFactory();
+        Connection connection = factory.recuperaConexao();
 
         Statement stm = connection.createStatement();
         stm.execute("INSERT INTO PRODUTO (nome, descricao) VALUES ('Mouse', 'Mouse sem  fio')"
