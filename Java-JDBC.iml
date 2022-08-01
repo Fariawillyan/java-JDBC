@@ -16,5 +16,15 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/m-changes-pool-&amp;-c3p0" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/m-changes-pool-&amp;-c3p0" recursive="false" />
+      </library>
+    </orderEntry>
   </component>
 </module>

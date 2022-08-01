@@ -4,12 +4,12 @@ public class TestaInsercaoParametro {
 
     public static void main(String[] args) throws SQLException {
         ConnectionFactory factory = new ConnectionFactory();
-        try(Connection connection = factory.recuperaConexao()){
+        try(Connection connection = factory.recuperarConexao()){
 
             connection.setAutoCommit(false);
 
             try (PreparedStatement stm =
-                         connection.prepareStatement("INSERT INTO loja_virtual.PRODUTO (nome, descricao) VALUES (?, ?)", Statement.RETURN_GENERATED_KEYS);
+                         connection.prepareStatement("INSERT INTO loja_virtual.produto (nome, descricao) VALUES (?, ?)", Statement.RETURN_GENERATED_KEYS);
             ){
                 adicionarVariavel("SmartTV", "45 polegadas", stm);
                 adicionarVariavel("Radio", "Radio de bateria", stm);

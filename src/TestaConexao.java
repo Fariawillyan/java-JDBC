@@ -7,7 +7,7 @@ public class TestaConexao {
 
         //testando inferencia de tipo com o java 10 (var)
         var connectionFactory = new ConnectionFactory();
-        var connection = connectionFactory.recuperaConexao();
+        var connection = connectionFactory.recuperarConexao();
 
 
         System.out.println("FECHA CONEXAO");

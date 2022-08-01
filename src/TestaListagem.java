@@ -11,7 +11,7 @@ public class TestaListagem {
 
 
         ConnectionFactory factory = new ConnectionFactory();
-        Connection connection = factory.recuperaConexao();
+        Connection connection = factory.recuperarConexao();
 
 
         PreparedStatement stm = connection.prepareStatement("SELECT ID, NOME, DESCRICAO FROM PRODUTO");
