@@ -1,3 +1,5 @@
+import factory.ConnectionFactory;
+
 import java.sql.*;
 
 public class TestaListagem {
@@ -5,7 +7,7 @@ public class TestaListagem {
     public static void main(String[] args) throws SQLException {
 
         /* connection com o driver (precisar adicionar o jar do drive conect em library)
-        Connection connection = DriverManager               <---(virou classe ConnectionFactory)
+        Connection connection = DriverManager               <---(virou classe factory.ConnectionFactory)
                 .getConnection("jdbc:mysql://localhost/loja_virtual?useTimezone=true&serverTimezone=UTC",
                         "root", "root");*/
 
